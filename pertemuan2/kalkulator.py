@@ -2,10 +2,10 @@
 print("=========================================\n")
 print("      PROGRAM KALKULATOR SEDERHANA\n")
 print("=========================================\n")
-print("Pilih Oprator Aritmatika\n 1. Penjumlahan\n 2. Pengurangan\n 3. Perkalian\n 4.Pembagian\n5.Modulus")
-print("=========================================\n")
+print("Pilih Oprator Aritmatika\n1. Penjumlahan\n2. Pengurangan\n3. Perkalian\n4. Pembagian\n5. Modulus")
+print("\n=========================================\n")
 oprator = input("Pilih Oprator : ")
-print("=========================================\n")
+print("\n=========================================\n")
 
 if oprator == "1" :
     nilai1 = int(input("Masukan nilai pertama : "))

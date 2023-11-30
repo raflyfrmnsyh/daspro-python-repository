@@ -5,23 +5,31 @@ dataBase = {
     "username" : "Daspro2023",
     "password" : "Latihan"
 }
-
 chance = 3
-username = input("Masukan Username : ")
-
-def login(username):
+def loginProcess(username, password) :
     global chance
-    
-    while chance > 0:
-        password = input("Masukan Password : ")
-        if username != dataBase["username"] and password != dataBase["password"]:
-            chance -= 1
-            if chance > 0 :
-                print(f"Maaf username dan password salah!, kesempatan anda tersisa {chance} kali lagi")
-            elif chance == 0 :
-                print(f"Akses login diblokir!")
-        elif username == dataBase["username"] and password == dataBase["password"]:
-            print("Login Berhasil!")
-            break
+    if username != dataBase["username"] and password != dataBase["password"] :
+        chance -= 1
 
-login(username)
+        if chance > 0 :
+            print(f"Login gagal! kesempatan tersisa {chance} kali lagi")
+        elif chance == 0 :
+            print(f"Akses Login diblokir!")
+
+        return False
+    elif username == dataBase["username"] and password == dataBase["password"]:
+        print(f"Login success! Selamat datang {username}")
+        return True
+
+
+
+while chance > 0 :
+    print("=====================================")
+    print("             HALAMAN LOGIN           ")
+    print("=====================================")
+    username = input("Masukan Username :")
+    password = input("Masukan Password :")
+    print("=====================================")
+
+    if loginProcess(username, password):
+        break

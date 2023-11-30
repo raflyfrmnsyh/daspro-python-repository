@@ -7,6 +7,6 @@ def volumeTabung(r, t):
     phi = 3.14
     kuadrat = r**2
     rumus = phi * kuadrat * t
-    print(f"Volume Balok adalah : {rumus}")
+    print(f"Volume Balok adalah : {round(rumus)}")
 
 volumeTabung(r,t)
